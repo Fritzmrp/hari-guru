@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ucapan Hari Guru untuk Mama</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", Arial, sans-serif;
+        background: #fdf8ee;
+        display: flex;
+        justify-content: center;
+        padding: 40px 10px;
+    }
+
+    .card {
+        background: white;
+        padding: 30px;
+        border-radius: 18px;
+        max-width: 480px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        text-align: center;
+        animation: fadeIn 0.8s ease;
+    }
+
+    .title {
+        font-size: 26px;
+        font-weight: 700;
+        color: #4b3526;
+        margin-bottom: 12px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        color: #6a5343;
+        margin-bottom: 18px;
+    }
+
+    .illustration {
+        width: 100%;
+        max-width: 260px;
+        margin: 0 auto 20px;
+        display: block;
+        border-radius: 14px; /* biar fotonya lebih cantik */
+    }
+
+    .message-box {
+        background: #fff6e1;
+        border-radius: 12px;
+        padding: 18px;
+        text-align: left;
+        border-left: 6px solid #ffb74d;
+        margin-bottom: 20px;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #533b2e;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background: #ff9800;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 15px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        background: #fb8c00;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <!-- Foto Mama (gunakan file guru.jpg di folder yang sama) -->
+    <img class="illustration" src="guru.jpg" alt="Foto Mama">
+
+    <div class="title">Selamat Hari Guru, Mama!</div>
+    <div class="subtitle">Terima kasih sudah menjadi terang bagi banyak anak.</div>
+
+    <div class="message-box" id="msg">
+        “Selamat Hari Guru, Ma. Ma do guru na terbaik di sekolah dohot di bagas. 
+        Mauliate godang tu holong ni Ma. Sai sehat ma ho, Ma.”
+    </div>
+
+    <button onclick="copyMsg()">Salin Ucapan</button>
+</div>
+
+<script>
+function copyMsg() {
+    const text = document.getElementById("msg").innerText;
+    navigator.clipboard.writeText(text);
+    alert("Ucapan berhasil disalin!");
+}
+</script>
+
+</body>
+</html>
